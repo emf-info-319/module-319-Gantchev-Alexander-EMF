@@ -1,4 +1,4 @@
-package exercices.exercice03;
+package exercice03;
 
 public class Typedebase {
     public static void main(String[] args) {
