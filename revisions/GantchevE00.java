@@ -17,11 +17,11 @@ public class GantchevE00 {
             System.out.println(NomEquipe1 + " joue contre " + NomEquipe2 + "et le résultat est : " + score_Barcelone
                     + " à " + score_Madrid);
             if (score_Barcelone > score_Madrid) {
-                System.out.println("Barcelone a gagné !");
+                System.out.println(NomEquipe1+" a gagné !");
                 nbr_pts_Barcelone = nbr_pts_Barcelone + NOMBRE_PTS_VICTOIRE;
 
             } else if (score_Barcelone < score_Madrid) {
-                System.out.println("Madrid a gagné !");
+                System.out.println(NomEquipe2+" a gagné !");
                 nbr_pts_Madrid = nbr_pts_Madrid + NOMBRE_PTS_VICTOIRE;
             } else if (score_Barcelone == score_Madrid) {
                 System.out.println("Match nul...");
