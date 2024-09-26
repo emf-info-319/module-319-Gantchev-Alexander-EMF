@@ -2,8 +2,8 @@ package devoirs.devoir03;
 
 public class Devoir03 {
     public static void main(String[] args) {
-        int jour = 31;
-        int annee = 2024;
+        int jour = 23;
+        int annee = 1992;
         int mois = 12;
         int resultat = 0;
         switch (mois) { // remplace le (args) part la variable qui va être utiliser
@@ -12,7 +12,7 @@ public class Devoir03 {
 
                 break;
             case 2:
-                resultat = jour + 31;
+                resultat = jour + 31; //On ajoute 31 jours (Dépend du mois)
 
                 break;
             case 3:

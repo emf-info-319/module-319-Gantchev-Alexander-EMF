@@ -13,6 +13,7 @@ public class ExerciceTableaux2 {
             monTableau[i] = (int) (Math.random() * (MAX - MIN + 1)) + MIN;
             for (int j = 0; j < monTableau.length; j++) {
                 System.out.println("Cellule :" + monTableau[i]);
+            
             }
 
         }
