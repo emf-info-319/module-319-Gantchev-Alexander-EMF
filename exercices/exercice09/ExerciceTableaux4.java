@@ -2,20 +2,18 @@ package exercice09;
 
 public class ExerciceTableaux4 {
 
-    public final static int MAX = 20;
-    public final static int MIN = 1;
+  public static void main(String[] args) {
 
-    public static void main(String[] args) {
-        int []tab ;
+    int[] tab;
+    tab = new int[5];
 
-        tab = new int[5];
+    int nb = (int) (Math.random() * (20 - 1));
 
-      for (int index = 0; index < tab.length; index++) {
-        tab[0] = (int) (Math.random() * (MAX - MIN + 1)) + MIN;
-        tab[1] = tab[0] ++;
-        tab[2] = tab[1]++;
-        System.out.println(tab[index]);
-      }
+    for (int i = 0; i < tab.length; i++) {
+      tab[i] = nb;
+      System.out.println(tab[i]);
+      nb = nb +1;
     }
-    
+  }
+
 }
