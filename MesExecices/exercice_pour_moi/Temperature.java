@@ -1,3 +1,4 @@
+package MesExecices.exercice_pour_moi;
 public class Temperature {
 
     public final static int TEMP_MIN = -40;
@@ -7,6 +8,7 @@ public class Temperature {
     public static void main(String[] args) {
         int[] temperatures = new int[NOMBRE_JOURS];
         for (int i = 0; i < temperatures.length; i++) {
+            
             temperatures[i] = (int) (Math.random() * (TEMP_MAX - TEMP_MIN + 1)) + TEMP_MIN;
             
             switch (temperatures[i]) {
