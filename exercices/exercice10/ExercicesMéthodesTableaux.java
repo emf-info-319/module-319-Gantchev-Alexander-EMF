@@ -1,10 +1,12 @@
 public class ExercicesMéthodesTableaux {
     public static void main(String[] args) {
-        
-        int[] tab= creeTableau(6767);
+
+        int[] tab = creeTableau(67);
         int[] tab1 = remplirtab(6767);
         int[] tab2 = remplirtabrandom(9);
-        int[] tab3 = TailleTableau(tab);
+        TailleTableau(tab);
+        afficherTableau(tab2);
+        trouverMinimum(tab2);
 
     }
 
@@ -35,6 +37,28 @@ public class ExercicesMéthodesTableaux {
 
     public static int TailleTableau(int[] tab) {
         return tab.length;
-    }
 
+    }
+    public static void afficherTableau(int[] tableau) {
+        for (int i = 0; i < tableau.length; i++) {
+            
+        }
+
+
+
+    }public static int trouverMinimum(int[] tableau) {
+        int minimum = tableau[0]; 
+        
+                for (int i = 1; i < tableau.length; i++) {
+                    
+                    if (tableau[i] < minimum) {
+                        System.out.println(i);
+                        minimum = tableau[i];
+                    }
+
+                }
+                System.out.println(minimum);
+                return minimum;
+            }
+        
 }
