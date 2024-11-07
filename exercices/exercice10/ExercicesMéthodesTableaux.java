@@ -7,7 +7,13 @@ public class ExercicesMéthodesTableaux {
         TailleTableau(tab);
         afficherTableau(tab2);
         trouverMinimum(tab2);
-
+        trouverMaximum(tab2);
+        compterFrequence(tab2, 0);
+        calculerSomme(tab2);
+        calculerMoyenne(tab2);
+        remplacerValeur(tab2, 2, 3);
+        trouverPremiereOccurrence(tab2, 0);
+        trouverDerniereOccurrence(tab2, 0);
     }
 
     public static int[] creeTableau(int taille) {
@@ -29,8 +35,6 @@ public class ExercicesMéthodesTableaux {
         int[] tablo = new int[taille];
         for (int i = 0; i < tablo.length; i++) {
             tablo[i] = (int) (Math.random() * (3000 - 1));
-            ;
-
         }
         return tablo;
     }
@@ -55,10 +59,11 @@ public class ExercicesMéthodesTableaux {
             if (tableau[i] < minimum) {
                 System.out.println(i);
                 minimum = tableau[i];
+
             }
 
         }
-        System.out.println(minimum);
+        System.out.println("le plus petit est " + minimum);
         return minimum;
     }
 
@@ -68,10 +73,14 @@ public class ExercicesMéthodesTableaux {
         for (int i = 1; i < tableau.length; i++) {
             if (tableau[i] > maximum) {
                 maximum = tableau[i];
+
             }
         }
+        System.out.println("le plus grand est " + maximum);
         return maximum;
-    }public static int compterFrequence(int[] tableau, int valeur) {
+    }
+
+    public static int compterFrequence(int[] tableau, int valeur) {
         int frequence = 0;
 
         for (int i = 0; i < tableau.length; i++) {
@@ -80,50 +89,55 @@ public class ExercicesMéthodesTableaux {
             }
         }
         return frequence;
-    }public static int calculerSomme(int[] tableau) {
+    }
+
+    public static int calculerSomme(int[] tableau) {
         int somme = 0;
 
         for (int i = 0; i < tableau.length; i++) {
             somme += tableau[i];
         }
         return somme;
-    }public static double calculerMoyenne(int[] tableau) {
-        
+    }
+
+    public static double calculerMoyenne(int[] tableau) {
 
         double somme = 0;
 
         for (int i = 0; i < tableau.length; i++) {
             somme += tableau[i];
-        }	
+        }
 
         return somme / tableau.length;
     }
+
     public static void remplacerValeur(int[] tableau, int valeurCible, int nouvelleValeur) {
         for (int i = 0; i < tableau.length; i++) {
             if (tableau[i] == valeurCible) {
                 tableau[i] = nouvelleValeur;
             }
         }
-    }public static int trouverPremiereOccurrence(int[] tableau, int valeurRecherchee) {
-        for (int i = 0; i < tableau.length; i++) {
-            if (tableau[i] == valeurRecherchee) {
-                return i; // Retourne l'indice de la première occurrence trouvée
-            }
-        }
-        return -1; // Retourne -1 si la valeur n'est pas trouvée dans le tableau
-    }public static int trouverDerniereOccurrence(int[] tableau, int valeurRecherchee) {
-        for (int i = tableau.length - 1; i >= 0; i--) {
-            if (tableau[i] == valeurRecherchee) {
-                return i; // Retourne l'indice de la dernière occurrence trouvée
-            }
-        }
-        return -1; // Retourne -1 si la valeur n'est pas trouvée dans le tableau
     }
 
+    public static int trouverPremiereOccurrence(int[] tableau, int valeurRecherchee) {
+        int position = -1;
+        for (int i = 0; i < tableau.length; i++) {
+            if (tableau[i] == valeurRecherchee) {
+                position = i;
+                break; 
+            }
+        }
+        return position; // Retourne l'indice de la première occurrence trouvée,ET -1 si la valeur n'est pas trouvée dans le tableau
+    }
 
-
-
-
-
-
+    public static int trouverDerniereOccurrence(int[] tableau, int valeurRecherchee) {
+        int position = -1;
+        for (int i = tableau.length - 1; i >= 0; i--) {
+            if (tableau[i] == valeurRecherchee) {
+                position = i;
+                break; 
+            }
+        }
+        return position; // Retourne l'indice de la dernière occurrence trouvée,ET -1 si la valeur n'est pas trouvée dans le tableau
+    }
 }
