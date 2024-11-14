@@ -14,18 +14,16 @@ public class ExercicesInversionTableau {
             tab[i] = (int) (Math.random() * (MAX - MIN + 1)) + MIN;
             System.out.println("Contenu du tableau initial : " + tab[i]);
         }
-        int w = tabinverse.length -1;
+        int w = tabinverse.length - 1;
         for (int i = 0; i < tabinverse.length; i++) {
-            
-            tabinverse[w] = tab [i];
+
+            tabinverse[w] = tab[i];
             w--;
         }
         for (int i = 0; i < tabinverse.length; i++) {
             System.out.println("Contenu du tableau final : " + tabinverse[i]);
         }
-          
 
-        
         return tabinverse;
     }
 
